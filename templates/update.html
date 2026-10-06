@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Modificar Palabra</h3>
+<br>
+<form method="post" action="/update/{{Item.id}}">
+  <div class="mb-2">
+    <label for="titleid" class="form-label">Palabra: </label>
+    <!-- Cambiado de placeholder a value -->
+    <input type="text" value="{{Item.title}}" id="titleid" name="title" class="form-control">
+  </div>
+  
+  <div class="mb-2">
+    <label for="decid" class="form-label">Descripción: </label>
+    <!-- Cambiado de placeholder a value -->
+    <input type="text" value="{{Item.description}}" id="decid" name="description" class="form-control">
+  </div>
+
+  <br>
+  <input type="submit" value="Submit Form" class="btn btn-primary">
+</form>
+{% endblock %}
