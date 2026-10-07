@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  microeconomia-app:
+    build: .
+    ports:
+      - "5000:5000" # Host:Contenedor (ajusta si tu app usa otro puerto)
+    volumes:
+      # Mapea la carpeta actual para sincronizar la base de datos
+      - ./:/app/ 
+    restart: unless-stopped
